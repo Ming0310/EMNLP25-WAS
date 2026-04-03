@@ -25,7 +25,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Introduction](#introduction)
 - [Method / Framework](#method--framework)
@@ -39,7 +39,7 @@
 
 ---
 
-## 📌 Introduction
+## Introduction
 
 Welcome to the official repository for **WAS**. This project provides the codebase of our EMNLP 2025 paper, offering a novel training-free weight-aware activation sparsity framework for accelerating LLM inference.
 
@@ -47,19 +47,17 @@ Welcome to the official repository for **WAS**. This project provides the codeba
 
 ---
 
-## 🧠 Method / Framework
+## Method / Framework
 
 ### Framework Figure
 
-```markdown
 ![Architecture](./figs/main.pdf)
-```
 
 **Figure 1.** Overall framework of WAS. The method consists of three main stages: (1) activation collection and histogram generation, (2) greedy optimization for component-wise sparsity allocation, and (3) TPE-based layer-wise sparsity optimization.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 ├── was/                                          # Core WAS module
@@ -99,7 +97,7 @@ Welcome to the official repository for **WAS**. This project provides the codeba
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ### 1. Clone the repository
 
@@ -123,7 +121,7 @@ pip install -e .
 
 ---
 
-## 🚀 Usage
+## Usage
 
 We provide a complete workflow in the `scripts/` directory. Follow these steps in order:
 
@@ -163,10 +161,11 @@ Finally, evaluate the optimized sparse model on perplexity and downstream tasks:
 
 ```bash
 bash scripts/evaluate.bash
+```
 
 ---
 
-## 📊 Main Results
+## Main Results
 
 ### Perplexity Results
 
@@ -182,7 +181,7 @@ bash scripts/evaluate.bash
 
 ---
 
-## 📝 Citation
+## Citation
 
 If you find this work useful in your research, please cite our paper:
 
@@ -200,12 +199,12 @@ If you find this work useful in your research, please cite our paper:
 
 ---
 
-## 🙏 Acknowledgement
+## Acknowledgement
 
 This codebase is heavily built upon [TEAL](https://github.com/FasterDecoding/TEAL) and [Optuna](https://github.com/optuna/optuna). We thank the authors for their excellent work and open-source contributions.
 
 ---
 
-## 📄 License
+## License
 
 This project is released under the Apache License 2.0. See [`LICENSE`](./LICENSE) for details.
