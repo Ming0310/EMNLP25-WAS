@@ -70,7 +70,6 @@ Welcome to the official repository for **WAS**. This project provides the codeba
 ├── gpt-fast/                                    # Inference engine
 │   ├── model.py
 │   ├── generate.py
-│   ├── quantize.py
 │   └── scripts/
 │       ├── base_run.sh
 │       ├── convert_hf_checkpoint.py
