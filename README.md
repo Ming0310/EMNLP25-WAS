@@ -32,6 +32,7 @@
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Main Results](#main-results)
 - [Citation](#citation)
 - [Acknowledgement](#acknowledgement)
 - [License](#license)
@@ -51,7 +52,7 @@ Welcome to the official repository for **WAS**. This project provides the codeba
 ### Framework Figure
 
 ```markdown
-![Architecture](./figs/architecture.png)
+![Architecture](./figs/main.pdf)
 ```
 
 **Figure 1.** Overall framework of WAS. The method consists of three main stages: (1) activation collection and histogram generation, (2) greedy optimization for component-wise sparsity allocation, and (3) TPE-based layer-wise sparsity optimization.
@@ -88,7 +89,10 @@ Welcome to the official repository for **WAS**. This project provides the codeba
 ├── utils/                                        # Utility functions
 │   ├── utils.py
 │   └── data.py
-├── figs/
+├── figs/                                          # Figures and results
+│   ├── main.pdf                                   # Main framework figure
+│   ├── ppl_result.png                             # Perplexity results
+│   └── speedup.pdf                                # Speedup results
 ├── pyproject.toml
 └── LICENSE
 ```
@@ -159,7 +163,22 @@ Finally, evaluate the optimized sparse model on perplexity and downstream tasks:
 
 ```bash
 bash scripts/evaluate.bash
-```
+
+---
+
+## 📊 Main Results
+
+### Perplexity Results
+
+![PPL Results](./figs/ppl_result.png)
+
+**Figure 2.** Perplexity comparison on standard benchmarks.
+
+### Speedup Results
+
+![Speedup Results](./figs/speedup.pdf)
+
+**Figure 3.** Inference speedup achieved by WAS.
 
 ---
 
