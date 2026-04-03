@@ -13,9 +13,8 @@
 
 ## 👥 Authors
 
-**Ming Wang**<sup>1</sup>, **Miao Zhang**<sup>1</sup>, **Xuebo Liu**<sup>1</sup>, **Liqiang Nie**<sup>1</sup>\*
-
-<sup>1</sup> Harbin Institute of Technology, Shenzhen  
+**Ming Wang**, **Miao Zhang**, **Xuebo Liu**, **Liqiang Nie**\*  
+Harbin Institute of Technology, Shenzhen  
 \* Corresponding author
 
 ## 🔗 Links
