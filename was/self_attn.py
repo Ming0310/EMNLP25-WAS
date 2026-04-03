@@ -27,7 +27,6 @@ def _monkeypatch_self_attn(self_attn, file_path, grabbing_mode=False):
     self_attn.grabbing_mode = grabbing_mode
 
     if not grabbing_mode:
-        # 新改的
         self_attn.distrs = {}
         self_attn.distrs['q'] = Distribution(file_path, hidden_type='q')
         self_attn.distrs['k'] = Distribution(file_path, hidden_type='k')

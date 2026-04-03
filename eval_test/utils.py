@@ -6,6 +6,8 @@ import sys
 import os
 import time
 def create_logger(output_dir, dist_rank=0, name=''):
+    if not os.path.exists(output_dir):
+        os.mkdir(output_dir)
     # create logger
     logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)

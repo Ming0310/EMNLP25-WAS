@@ -13,7 +13,7 @@ import numpy as np
 
 
 @torch.no_grad()
-def evaluate_ppl(model, testenc, dev):
+def eval_ppl(model, testenc, dev):
     print("Evaluating ...")
     model.seqlen = 2048
     
@@ -92,39 +92,42 @@ def evaluate_ppl(model, testenc, dev):
         neg_log_likelihood = loss.float() * model.seqlen
         nlls.append(neg_log_likelihood)
     ppl = torch.exp(torch.stack(nlls).sum() / (nsamples * model.seqlen))
-    # logger.info(f"Perplexity: {ppl.item():3f}")
 
     model.config.use_cache = use_cache
     return ppl
 
 
 @torch.no_grad()
-def evaluate(lm, tasks, fewshot):
-    from lm_eval.utils import make_table
+def evaluate(lm, args, logger):
     results = {}
-    t_results = evaluator.simple_evaluate(
-        lm,
-        tasks=tasks.split(','),
-        num_fewshot=fewshot,
-        limit=None,
-    )
-    results.update(t_results)
-    print(make_table(results))         
+    if args.tasks != "":
+        t_results = evaluator.simple_evaluate(
+            lm,
+            tasks=args.tasks.split(','),
+            num_fewshot=args.fewshot,
+            limit=None,
+        )
+        results.update(t_results)
+        logger.info(results)       
     return results
 
 
-def eval_tasks(model, tokenizer, eval_ppl, model_path, tasks="", fewshot=0, batch_size="auto:4.0", seed=2):
+def eval_tasks(model, tokenizer, args, parallelize):
+    logger = create_logger(args.output_dir)
     DEV=torch.device('cuda:0')
-    if eval_ppl:
-        datasets = ['wikitext2', 'c4_new'] #
+    logger.info(f"model:{args.model}, sparsity:{args.sparsity}")
+    if args.eval_ppl:
+        datasets = ['wikitext2', 'c4_new']
         for dataset in datasets:
             dataloader, testloader = get_loaders(
-                dataset, seed=seed, model=model_path, seqlen=2048
+                dataset, seed=args.seed, model=args.model, seqlen=2048
             )
-            ppl = evaluate_ppl(model, testloader, dev=DEV)
-            print(f"{dataset} Perplexity: {ppl.item():3f}")
-    if tasks != "":
+            logger.info(dataset)
+            ppl = eval_ppl(model, testloader, dev=DEV)
+            logger.info(f"Perplexity: {ppl.item():3f}")
+    if args.tasks != "":
         from lm_eval.models.huggingface import HFLM
         model.to(DEV)
-        lm = HFLM(pretrained=model, tokenizer=tokenizer, batch_size=batch_size)
-        evaluate(lm, tasks, fewshot)
+        lm = HFLM(pretrained=model, tokenizer=tokenizer, batch_size=args.batch_size, parallelize=parallelize)
+        evaluate(lm, args, logger)
+    return logger

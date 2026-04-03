@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "was"
+version = "0.1"
+description = "Weight-Aware Activation Sparsity with Constrained Bayesian Optimization Scheduling for Large Language Models"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+
+dependencies = [
+   "torch==2.4.0", "transformers==4.44.1", "accelerate", "sentencepiece", "tiktoken", "blobfile", "safetensors", "pandas",
+   "datasets", "triton", "msgspec"
+]
+
+[project.optional-dependencies]
+eval = ["protobuf","datasets", "packaging", "flash-attn==2.6.1", "pandas"]
+
+
+[project.urls]
+"Homepage" = "TODO"
+
+[tool.setuptools.packages.find]
+exclude = ["notebooks*", "scripts*"]
