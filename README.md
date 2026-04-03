@@ -17,13 +17,6 @@ Harbin Institute of Technology, Shenzhen
 
 ---
 
-## 🔗 Links
-
-- **Paper**: [`EMNLP 2025`](https://aclanthology.org/2025.emnlp-main.57/)
-- **Code Repository**: [`GitHub`](https://github.com/HITSZ-Miao-Group/WAS)
-
----
-
 ## 📋 Table of Contents
 
 - [Introduction](#-introduction)
@@ -170,13 +163,9 @@ bash scripts/evaluate.bash
 
 ![PPL Results](./figs/ppl_result.png)
 
-**Figure 2.** Perplexity comparison on standard benchmarks.
-
 ### Speedup Results
 
 ![Speedup Results](./figs/speedup.png)
-
-**Figure 3.** Inference speedup achieved by WAS.
 
 ---
 
