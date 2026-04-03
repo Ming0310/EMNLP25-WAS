@@ -25,8 +25,8 @@ Harbin Institute of Technology, Shenzhen
 - [Installation](#-installation)
 - [Usage](#-usage)
 - [Main Results](#-main-results)
-- [Citation](#-citation)
-- [Acknowledgement](#-acknowledgements)
+- [Citation](#citation)
+- [Acknowledgement](#-acknowledgement)
 - [License](#-license)
 
 ---
