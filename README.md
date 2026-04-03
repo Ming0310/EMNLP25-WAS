@@ -94,7 +94,7 @@ Welcome to the official repository for **WAS**. This project provides the codeba
 
 ---
 
-## 🛠️ Installation
+## 📦 Installation
 
 ### 1. Clone the repository
 
