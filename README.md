@@ -2,6 +2,12 @@
 
 # 🚀 WAS: Weight-Aware Activation Sparsity with Constrained Bayesian Optimization Scheduling for Large Language Models
 
+**Ming Wang**, **Miao Zhang**, **Xuebo Liu**, **Liqiang Nie**\*  
+Harbin Institute of Technology, Shenzhen  
+\* Corresponding author
+
+---
+
 [![EMNLP](https://img.shields.io/badge/EMNLP-2025-blue.svg)](https://aclanthology.org/2025.emnlp-main.57/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 <img src="https://img.shields.io/badge/python-≥3.11-blue?style=flat-square" alt="Python">
@@ -10,14 +16,6 @@
 </div>
 
 ---
-
-<div align="center">
-
-**Ming Wang**, **Miao Zhang**, **Xuebo Liu**, **Liqiang Nie**\*  
-Harbin Institute of Technology, Shenzhen  
-\* Corresponding author
-
-</div>
 
 ## 🔗 Links
 
