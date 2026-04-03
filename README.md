@@ -11,11 +11,13 @@
 
 ---
 
-## 👥 Authors
+<div align="center">
 
 **Ming Wang**, **Miao Zhang**, **Xuebo Liu**, **Liqiang Nie**\*  
 Harbin Institute of Technology, Shenzhen  
 \* Corresponding author
+
+</div>
 
 ## 🔗 Links
 
