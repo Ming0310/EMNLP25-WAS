@@ -158,7 +158,7 @@ Finally, evaluate the optimized sparse model on perplexity and downstream tasks:
 bash scripts/evaluate.bash
 ```
 
-### Step 5: Kernel Speedup Test
+### Step 5: Kernel Speedup (Single Batch, Optional)
 
 Finally, test the inference speedup using the optimized sparse model in the gpt-fast directory:
 
