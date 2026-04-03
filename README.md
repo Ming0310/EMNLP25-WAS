@@ -27,15 +27,15 @@
 
 ## 📋 Table of Contents
 
-- [Introduction](#introduction)
-- [Method / Framework](#method--framework)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Main Results](#main-results)
-- [Citation](#citation)
-- [Acknowledgement](#acknowledgement)
-- [License](#license)
+- [Introduction](#-introduction)
+- [Method / Framework](#-method--framework)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Main Results](#-main-results)
+- [Citation](#-citation)
+- [Acknowledgement](#-acknowledgements)
+- [License](#-license)
 
 ---
 
