@@ -189,7 +189,7 @@ If you find this work useful in your research, please cite our paper:
 
 ## 🙏 Acknowledgement
 
-This codebase is heavily built upon [TEAL](https://github.com/FasterDecoding/TEAL) and [Optuna](https://github.com/optuna/optuna). We thank the authors for their excellent work and open-source contributions.
+This codebase is heavily built upon [TEAL](https://github.com/FasterDecoding/TEAL), [gpt-fast](https://github.com/pytorch-labs/gpt-fast) and [Optuna](https://github.com/optuna/optuna). We thank the authors for their excellent work and open-source contributions.
 
 ---
 
