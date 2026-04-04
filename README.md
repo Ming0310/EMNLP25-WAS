@@ -62,30 +62,13 @@ Welcome to the official repository for **WAS**. This project provides the codeba
 │   ├── sparse_gemv.py
 │   └── compile_wrapper.py
 ├── eval_test/                                    # Evaluation utilities
-│   ├── evaluate.py
-│   ├── datautils.py
-│   └── LMClass.py
 ├── gpt-fast/                                    # Inference engine
 │   ├── model.py
 │   ├── generate.py
-│   └── scripts/
-│       ├── base_run.sh
-│       ├── convert_hf_checkpoint.py
-│       ├── prepare.sh
-│       ├── run.sh
-│       └── tp_run.sh
+│   └── scripts
 ├── scripts/                                      # Executable scripts
-│   ├── grab_acts.bash
-│   ├── greedy.bash
-│   ├── tpe.bash
-│   └── evaluate.bash
 ├── utils/                                        # Utility functions
-│   ├── utils.py
-│   └── data.py
 ├── figs/                                          # Figures and results
-│   ├── main.png                                   # Main framework figure
-│   ├── ppl_result.png                             # Perplexity results
-│   └── speedup.png                                # Speedup results
 ├── pyproject.toml
 └── LICENSE
 ```
@@ -120,9 +103,7 @@ pip install -e .
 
 We provide a complete workflow in the `scripts/` directory. Follow these steps in order:
 
-### Step 1: Collect Activations
-
-First, collect activations and histograms from the model:
+### Step 1: Collect Weight-Aware Activations
 
 ```bash
 # Modify MODEL_NAME in the script to point to your HuggingFace model
@@ -130,13 +111,7 @@ First, collect activations and histograms from the model:
 bash scripts/grab_acts.bash
 ```
 
-This script will:
-- Collect activation histograms for each layer and component
-- Save activations and histograms to `OUTPUT_PATH`
-
 ### Step 2: Greedy Optimization for Component Allocation
-
-Next, use greedy optimization to find the best sparsity allocation for different components (Q, K, V, O, Gate, Up, Down) within each layer:
 
 ```bash
 bash scripts/greedy.bash
@@ -144,23 +119,17 @@ bash scripts/greedy.bash
 
 ### Step 3: TPE-Based Layer Sparsity Allocation
 
-Then, use TPE (Tree-structured Parzen Estimator) to optimize the sparsity rate for each layer:
-
 ```bash
 bash scripts/tpe.bash
 ```
 
 ### Step 4: Evaluation
 
-Finally, evaluate the optimized sparse model on perplexity and downstream tasks:
-
 ```bash
 bash scripts/evaluate.bash
 ```
 
 ### Step 5: Kernel Speedup (Single Batch, Optional)
-
-Finally, test the inference speedup using the optimized sparse model in the gpt-fast directory:
 
 ```bash
 cd gpt-fast
