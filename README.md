@@ -43,7 +43,7 @@ Welcome to the official repository for **WAS**. This project provides the codeba
 
 ![Architecture](./figs/main.png)
 
-**Figure 1.** Overall framework of WAS. The method consists of three main stages: (1) activation collection and histogram generation, (2) greedy optimization for component-wise sparsity allocation, and (3) TPE-based layer-wise sparsity optimization.
+**Figure 1.** Overall framework of WAS. The method consists of three main stages: (1) weight-aware activation collection and histogram generation, (2) greedy optimization for component-wise sparsity allocation, and (3) TPE-based layer-wise sparsity optimization.
 
 ---
 
