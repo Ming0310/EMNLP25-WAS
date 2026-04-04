@@ -80,7 +80,7 @@ Welcome to the official repository for **WAS**. This project provides the codeba
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/HITSZ-Miao-Group/WAS.git
+git clone https://github.com/Ming0310/WAS.git
 cd WAS
 ```
 
